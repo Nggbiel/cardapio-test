@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Point do Pratinho - Cardápio Digital</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <style>
+    body {
+      background-color: #fff8f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background-color: #ff4081;
+    }
+
+    .navbar .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      background-color: #ffb6c1;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .section-title {
+      color: #ff4081;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #f2dede;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(255, 64, 129, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h5 {
+      color: #ff4081;
+      font-weight: 600;
+    }
+
+    .btn-order {
+      background-color: #28a745;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .btn-order:hover {
+      background-color: #218838;
+    }
+
+    .fixed-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <span class="navbar-brand fs-3">Point do Pratinho</span>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Seja Bem-vindo ao Point do Pratinho</h1>
+    <p>Escolha seu prato favorito e faça seu pedido!</p>
+  </section>
+
+  <!-- Abas -->
+  <div class="container my-5">
+    <ul class="nav nav-tabs justify-content-center" id="menuTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pratinhos-tab" data-bs-toggle="tab" data-bs-target="#pratinhos" type="button" role="tab">Pratinhos</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pasteis-tab" data-bs-toggle="tab" data-bs-target="#pasteis" type="button" role="tab">Pastéis</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas" type="button" role="tab">Bebidas</button>
+      </li>
+    </ul>
+    <div class="tab-content pt-4" id="menuTabsContent">
+      <!-- Pratinhos -->
+      <div class="tab-pane fade show active" id="pratinhos" role="tabpanel">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Creme de Galinha</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Creme de Galinha" />
+              <p>R$ 13,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Creme%20de%20Galinha">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Vatapá</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Vatapá" />
+              <p>R$ 13,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Vatapá">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Escondidinho de Carne do Sol</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Escondidinho de Carne do Sol" />
+              <p>R$ 18,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Escondidinho%20de%20Carne%20do%20Sol">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Escondidinho de Camarão</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Escondidinho de Camarão" />
+              <p>R$ 20,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Escondidinho%20de%20Camar%C3%A3o">Pedir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pastéis -->
+      <div class="tab-pane fade" id="pasteis" role="tabpanel">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Pastel de Carne</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Pastel de Carne" />
+              <p>R$ 10,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Pastel%20de%20Carne">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Pastel de Queijo</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Pastel de Queijo" />
+              <p>R$ 10,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Pastel%20de%20Queijo">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Pastel de Frango</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Pastel de Frango" />
+              <p>R$ 10,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Pastel%20de%20Frango">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Pastel de Calabresa</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Pastel de Calabresa" />
+              <p>R$ 10,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Pastel%20de%20Calabresa">Pedir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bebidas -->
+      <div class="tab-pane fade" id="bebidas" role="tabpanel">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Refrigerante Lata</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Refrigerante" />
+              <p>R$ 6,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Refrigerante%20Lata">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Refrigerante 600ml</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Refrigerante 600ml" />
+              <p>R$ 6,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Refrigerante%20600ml">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Suco Natural</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Suco Natural" />
+              <p>R$ 6,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Suco%20Natural">Pedir</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card">
+              <h5>Suco da Fruta</h5>
+              <img src="https://via.placeholder.com/150" class="img-fluid" alt="Suco da Fruta" />
+              <p>R$ 6,00</p>
+              <a class="btn btn-order" href="https://wa.me/5585987902900?text=Quero%20um%20Suco%20da%20Fruta">Pedir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 - Point do Pratinho</p>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5585987902900" class="fixed-whatsapp">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="60" height="60" />
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
